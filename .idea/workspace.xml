@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcbea7c1-9ada-4471-a0f5-9697dda67d4a" name="Changes" comment="Initial Changes">
-      <change afterPath="$PROJECT_DIR$/MuniClub/Main/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MuniClub/Main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/Main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MuniClub/Main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/Main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/MuniClub/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/MuniClub/urls.py" afterDir="false" />
@@ -27,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "santiagobello15"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;santiagobello15&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/santiagobello15/MuniClub.git",
-    "accountId": "579b93fb-f6f9-4cc6-97af-04d096986d0b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/santiagobello15/MuniClub.git&quot;,
+    &quot;accountId&quot;: &quot;579b93fb-f6f9-4cc6-97af-04d096986d0b&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2rxrFErhxV9qxAhn6GwVhgRguQW" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,14 +48,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Santi/OneDrive/GitHub/MuniClub/MuniClub/Main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Santi/OneDrive/GitHub/MuniClub/MuniClub/Main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\MuniClub\Main" />
