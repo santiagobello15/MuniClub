@@ -34,6 +34,12 @@ export default defineConfig({
       },
     ],
   },
-  server: { port: PORT, host: true },
+  server: {
+    proxy: {
+      '/api/v1': 'http://127.0.0.1:8000',
+    },
+    port: PORT,
+    host: true,
+  },
   preview: { port: PORT, host: true },
 });
