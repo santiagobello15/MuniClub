@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { _users } from 'src/_mock';
+import { _orders } from 'src/_mock';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Iconify } from 'src/components/iconify';
@@ -32,7 +32,7 @@ export function OrdersView() {
   const [filterName, setFilterName] = useState('');
 
   const dataFiltered: OrdersProps[] = applyFilter({
-    inputData: _users,
+    inputData: _orders,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
@@ -50,7 +50,7 @@ export function OrdersView() {
           color="inherit"
           startIcon={<Iconify icon="mingcute:add-line" />}
         >
-          New Asset
+          New Order
         </Button>
       </Box>
 
@@ -70,21 +70,25 @@ export function OrdersView() {
               <OrdersTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={_users.length}
+                rowCount={_orders.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    _users.map((user) => user.id)
+                    _orders.map((user) => user.id)
                   )
                 }
                 headLabel={[
-                  { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
+                  { id: 'id', label: 'Id' },
+                  { id: 'cusip', label: 'CUSIP' },
+                  { id: 'buyer', label: 'Buyer' },
+                  { id: 'seller', label: 'Seller' },
                   { id: 'status', label: 'Status' },
+                  { id: 'quantity', label: 'Quantity' },
+                  { id: 'price', label: 'Price' },
+                  { id: 'yield', label: 'Yield' },
+                  { id: 'totalAmount', label: 'Total Amount' },
                   { id: '' },
                 ]}
               />
@@ -105,7 +109,7 @@ export function OrdersView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, _users.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, _orders.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -117,7 +121,7 @@ export function OrdersView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={_users.length}
+          count={_orders.length}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}

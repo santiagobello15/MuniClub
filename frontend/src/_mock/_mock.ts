@@ -119,6 +119,34 @@ export const _boolean = (index: number) =>
     false,
   ][index];
 
+export const _statuses = (index: number) =>
+  [
+    'executed',
+    'cancelled',
+    'executed',
+    'executed',
+    'cancelled',
+    'executed',
+    'executed',
+    'cancelled',
+    'executed',
+    'cancelled',
+    'executed',
+    'cancelled',
+    'executed',
+    'executed',
+    'cancelled',
+    'executed',
+    'cancelled',
+    'executed',
+    'executed',
+    'cancelled',
+    'cancelled',
+    'executed',
+    'executed',
+    'cancelled',
+  ][index];
+
 export const _postTitles = (index: number) =>
   [
     'Whiteboard Templates By Industry Leaders',

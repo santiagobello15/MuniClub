@@ -17,12 +17,14 @@ import { Iconify } from 'src/components/iconify';
 
 export type OrdersProps = {
   id: string;
-  name: string;
-  role: string;
+  cusip: string;
+  buyer: string;
+  seller: string;
   status: string;
-  company: string;
-  avatarUrl: string;
-  isVerified: boolean;
+  quantity: number;
+  price: number;
+  yield: number;
+  totalAmount: number;
 };
 
 type OrdersTableRowProps = {
@@ -50,33 +52,26 @@ export function OrdersTableRow({ row, selected, onSelectRow }: OrdersTableRowPro
         </TableCell>
 
         <TableCell component="th" scope="row">
-          <Box gap={2} display="flex" alignItems="center">
-            <Avatar alt={row.name} src={row.avatarUrl} />
-            {row.name}
-          </Box>
+          {row.id}
         </TableCell>
 
-        <TableCell>{row.company}</TableCell>
+        <TableCell>{row.cusip}</TableCell>
 
-        <TableCell>{row.role}</TableCell>
+        <TableCell>{row.buyer}</TableCell>
 
-        <TableCell align="center">
-          {row.isVerified ? (
-            <Iconify width={22} icon="solar:check-circle-bold" sx={{ color: 'success.main' }} />
-          ) : (
-            '-'
-          )}
-        </TableCell>
+        <TableCell>{row.seller}</TableCell>
 
         <TableCell>
-          <Label color={(row.status === 'banned' && 'error') || 'success'}>{row.status}</Label>
+          <Label color={(row.status === 'cancelled' && 'error') || 'success'}>{row.status}</Label>
         </TableCell>
 
-        <TableCell align="right">
-          <IconButton onClick={handleOpenPopover}>
-            <Iconify icon="eva:more-vertical-fill" />
-          </IconButton>
-        </TableCell>
+        <TableCell>{row.quantity}</TableCell>
+
+        <TableCell>{row.price}</TableCell>
+
+        <TableCell>{row.yield}</TableCell>
+
+        <TableCell>{row.totalAmount}</TableCell>
       </TableRow>
 
       <Popover

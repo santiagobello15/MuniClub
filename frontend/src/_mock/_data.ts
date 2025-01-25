@@ -14,6 +14,7 @@ import {
   _yields,
   _cusipsName,
   _cusips,
+  _statuses,
 } from './_mock';
 
 // ----------------------------------------------------------------------
@@ -37,6 +38,20 @@ export const _inventory = [...Array(24)].map((_, index) => ({
   price: _prices(index),
   yield: _yields(index),
   avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
+}));
+
+// ----------------------------------------------------------------------
+
+export const _orders = [...Array(24)].map((_, index) => ({
+  id: _id(index),
+  cusip: _cusips(index),
+  buyer: _fullName(index),
+  seller: _fullName(index),
+  status: _statuses(index),
+  quantity: _quantities(index),
+  price: _prices(index),
+  yield: _yields(index),
+  totalAmount: _quantities(index),
 }));
 
 // ----------------------------------------------------------------------
