@@ -9,30 +9,30 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { _users } from 'src/_mock';
+import { _inventory } from 'src/_mock';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
 
 import { TableNoData } from '../table-no-data';
-import { UserTableRow } from '../user-table-row';
-import { UserTableHead } from '../user-table-head';
+import { InventoryTableRow } from '../inventory-table-row';
+import { InventoryTableHead } from '../inventory-table-head';
 import { TableEmptyRows } from '../table-empty-rows';
-import { UserTableToolbar } from '../user-table-toolbar';
+import { InventoryTableToolbar } from '../inventory-table-toolbar';
 import { emptyRows, applyFilter, getComparator } from '../utils';
 
-import type { UserProps } from '../user-table-row';
+import type { InventoryProps } from '../inventory-table-row';
 
 // ----------------------------------------------------------------------
 
-export function UserView() {
+export function InventoryView() {
   const table = useTable();
 
   const [filterName, setFilterName] = useState('');
 
-  const dataFiltered: UserProps[] = applyFilter({
-    inputData: _users,
+  const dataFiltered: InventoryProps[] = applyFilter({
+    inputData: _inventory,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
@@ -43,19 +43,19 @@ export function UserView() {
     <DashboardContent>
       <Box display="flex" alignItems="center" mb={5}>
         <Typography variant="h4" flexGrow={1}>
-          Users
+          Inventory
         </Typography>
         <Button
           variant="contained"
           color="inherit"
           startIcon={<Iconify icon="mingcute:add-line" />}
         >
-          New user
+          New Asset
         </Button>
       </Box>
 
       <Card>
-        <UserTableToolbar
+        <InventoryTableToolbar
           numSelected={table.selected.length}
           filterName={filterName}
           onFilterName={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,24 +67,27 @@ export function UserView() {
         <Scrollbar>
           <TableContainer sx={{ overflow: 'unset' }}>
             <Table sx={{ minWidth: 800 }}>
-              <UserTableHead
+              <InventoryTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={_users.length}
+                rowCount={_inventory.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    _users.map((user) => user.id)
+                    _inventory.map((item) => item.id)
                   )
                 }
                 headLabel={[
+                  { id: 'cusip', label: 'CUSIP' },
                   { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
+                  { id: 'maturity', label: 'Maturity' },
+                  { id: 'offered', label: 'Offered', align: 'center' },
+                  { id: 'liquidity', label: 'Liquidity' },
+                  { id: 'quantity', label: 'Quantity' },
+                  { id: 'price', label: 'Price' },
+                  { id: 'yield', label: 'Yield' },
                   { id: '' },
                 ]}
               />
@@ -95,7 +98,7 @@ export function UserView() {
                     table.page * table.rowsPerPage + table.rowsPerPage
                   )
                   .map((row) => (
-                    <UserTableRow
+                    <InventoryTableRow
                       key={row.id}
                       row={row}
                       selected={table.selected.includes(row.id)}
@@ -105,7 +108,7 @@ export function UserView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, _users.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, _inventory.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -117,7 +120,7 @@ export function UserView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={_users.length}
+          count={_inventory.length}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}

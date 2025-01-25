@@ -1,4 +1,4 @@
-import type { UserProps } from './user-table-row';
+import type { OrdersProps } from './orders-table-row';
 
 // ----------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ export function getComparator<Key extends keyof any>(
 // ----------------------------------------------------------------------
 
 type ApplyFilterProps = {
-  inputData: UserProps[];
+  inputData: OrdersProps[];
   filterName: string;
   comparator: (a: any, b: any) => number;
 };

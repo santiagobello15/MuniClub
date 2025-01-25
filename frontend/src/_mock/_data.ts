@@ -9,6 +9,11 @@ import {
   _postTitles,
   _description,
   _productNames,
+  _quantities,
+  _prices,
+  _yields,
+  _cusipsName,
+  _cusips,
 } from './_mock';
 
 // ----------------------------------------------------------------------
@@ -18,6 +23,21 @@ export const _myAccount = {
   email: 'demo@minimals.cc',
   photoURL: '/assets/images/avatar/avatar-25.webp',
 };
+
+// ----------------------------------------------------------------------
+
+export const _inventory = [...Array(24)].map((_, index) => ({
+  id: _id(index),
+  cusip: _cusips(index),
+  name: _cusipsName(index),
+  maturity: _times(index),
+  offered: _boolean(index),
+  liquidity: index % 4 ? 'low' : 'high',
+  quantity: _quantities(index),
+  price: _prices(index),
+  yield: _yields(index),
+  avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
+}));
 
 // ----------------------------------------------------------------------
 

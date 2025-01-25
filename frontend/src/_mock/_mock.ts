@@ -230,3 +230,77 @@ export const _productNames = (index: number) =>
     'Nike React Art3mis',
     'Nike React Infinity Run Flyknit A.I.R. Chaz Bear',
   ][index];
+
+export const _quantities = (index: number) =>
+  [
+    50000, 15000, 5000, 3500, 7650, 10000, 3000, 4500, 7800, 20000, 34500, 50000, 15000, 5000, 3500,
+    7650, 10000, 3000, 4500, 7800, 20000, 34500, 12000, 5000,
+  ][index];
+
+export const _prices = (index: number) =>
+  [
+    102.45, 98.32, 100.76, 103.15, 99.87, 97.43, 101.89, 98.76, 99.12, 100.25, 102.65, 96.87,
+    103.45, 97.89, 101.23, 99.56, 100.92, 98.34, 102.75, 97.12, 103.02, 99.43, 100.5, 98.99,
+  ][index];
+
+export const _yields = (index: number) =>
+  [
+    2.34, 3.12, 2.89, 3.45, 2.76, 3.01, 2.98, 3.23, 2.67, 3.1, 2.81, 3.36, 2.9, 3.05, 2.75, 3.18,
+    2.83, 3.29, 2.72, 3.11, 2.88, 3.34, 2.95, 3.02,
+  ][index];
+
+export const _cusips = (index: number) =>
+  [
+    '123456789',
+    '987654321',
+    '456123789',
+    '321987654',
+    '654321987',
+    '789456123',
+    '234567891',
+    '891234567',
+    '567891234',
+    '765432189',
+    '432198765',
+    '198765432',
+    '876543219',
+    '543219876',
+    '219876543',
+    '345678912',
+    '912345678',
+    '678912345',
+    '876543210',
+    '210987654',
+    '456789123',
+    '789123456',
+    '321654987',
+    '654987321',
+  ][index];
+
+export const _cusipsName = (index: number) =>
+  [
+    'City of Springfield General Obligation Bond',
+    'State of Texas Highway Revenue Bond',
+    'California School District Bond',
+    'Florida Municipal Utility Bond',
+    'New York City Transportation Revenue Bond',
+    'Illinois Water System Bond',
+    'Georgia County General Obligation Bond',
+    'Nevada State Infrastructure Bond',
+    'Ohio Municipal Development Bond',
+    'Pennsylvania School District Bond',
+    'Massachusetts Environmental Improvement Bond',
+    'Virginia Municipal Healthcare Bond',
+    'Tennessee County Revenue Bond',
+    'Missouri Local Government Bond',
+    'Indiana Toll Road Revenue Bond',
+    'Arizona State University Bond',
+    'Colorado Public Works Bond',
+    'Kentucky Urban Renewal Bond',
+    'Michigan State Park Revenue Bond',
+    'Louisiana Parish School Bond',
+    'Washington State Port Authority Bond',
+    'Oregon Transportation Bond',
+    'North Carolina Water and Sewer Bond',
+    'Alabama Economic Development Bond',
+  ][index];
