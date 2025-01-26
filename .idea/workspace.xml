@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcbea7c1-9ada-4471-a0f5-9697dda67d4a" name="Changes" comment="Added Frontend">
+      <change afterPath="$PROJECT_DIR$/MuniClub/Main/consumers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MuniClub/Main/routing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/MuniClub/asgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/MuniClub/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/MuniClub/MuniClub/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
