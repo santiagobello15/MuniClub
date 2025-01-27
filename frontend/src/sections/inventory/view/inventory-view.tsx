@@ -35,10 +35,12 @@ export function InventoryView() {
   const [filterName, setFilterName] = useState('');
   const [inventoryData, setInventoryData] = useState(_inventory);
 
-  inventoryWs.onmessage = (e) => {
-    console.log(e);
+  console.log(_inventory);
 
-    const wsMessage = JSON.parse(e.data)?.message;
+  inventoryWs.onmessage = (e) => {
+    const parsedMessage = JSON.parse(e.data);
+    const wsMessage = parsedMessage?.message;
+
     setInventoryData((prevInventory) => {
       const updatedInventory = [...prevInventory];
       const index = updatedInventory.findIndex((item) => item.id === wsMessage.id);
