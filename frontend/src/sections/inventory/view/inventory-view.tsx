@@ -24,15 +24,37 @@ import { emptyRows, applyFilter, getComparator } from '../utils';
 
 import type { InventoryProps } from '../inventory-table-row';
 
+const url = 'ws://127.0.0.1:8000/ws/socket-server/';
+const inventoryWs = new WebSocket(url);
+
 // ----------------------------------------------------------------------
 
 export function InventoryView() {
   const table = useTable();
 
   const [filterName, setFilterName] = useState('');
+  const [inventoryData, setInventoryData] = useState(_inventory);
+
+  inventoryWs.onmessage = (e) => {
+    console.log(e);
+
+    const wsMessage = JSON.parse(e.data)?.message;
+    setInventoryData((prevInventory) => {
+      const updatedInventory = [...prevInventory];
+      const index = updatedInventory.findIndex((item) => item.id === wsMessage.id);
+
+      if (index !== -1) {
+        updatedInventory[index] = wsMessage;
+      } else {
+        updatedInventory.push(wsMessage);
+      }
+
+      return updatedInventory;
+    });
+  };
 
   const dataFiltered: InventoryProps[] = applyFilter({
-    inputData: _inventory,
+    inputData: inventoryData,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
@@ -70,13 +92,13 @@ export function InventoryView() {
               <InventoryTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={_inventory.length}
+                rowCount={inventoryData.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    _inventory.map((item) => item.id)
+                    inventoryData.map((item) => item.id)
                   )
                 }
                 headLabel={[
@@ -108,7 +130,7 @@ export function InventoryView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, _inventory.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, inventoryData.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -120,7 +142,7 @@ export function InventoryView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={_inventory.length}
+          count={inventoryData.length}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}
