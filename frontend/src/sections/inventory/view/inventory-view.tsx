@@ -34,16 +34,14 @@ export function InventoryView() {
 
   const [filterName, setFilterName] = useState('');
   const [inventoryData, setInventoryData] = useState(_inventory);
-  const [highlightedRows, setHighlightedRows] = useState([]);
+  const [highlightedRows, setHighlightedRows] = useState<string[]>([]);
 
   inventoryWs.onmessage = (e) => {
     const parsedMessage = JSON.parse(e.data);
     const wsMessage = parsedMessage?.message;
 
-    // Agregar ID al array de filas resaltadas
     setHighlightedRows((prev) => [...prev, wsMessage.id]);
 
-    // Eliminar ID después de 1.5s
     setTimeout(() => {
       setHighlightedRows((prev) => prev.filter((id) => id !== wsMessage.id));
     }, 1500);
