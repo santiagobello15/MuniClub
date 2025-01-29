@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcbea7c1-9ada-4471-a0f5-9697dda67d4a" name="Changes" comment="Added Frontend">
-      <change afterPath="$PROJECT_DIR$/backend/Main/mock_data.py" afterDir="false" />
+    <list default="true" id="bcbea7c1-9ada-4471-a0f5-9697dda67d4a" name="Changes" comment="Upgraded mock data WS">
+      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/Main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/MuniClub/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/MuniClub/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/MuniClub/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/MuniClub/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/MuniClub/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/MuniClub/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MuniClub/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Main/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Main/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/sections/inventory/inventory-table-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sections/inventory/inventory-table-row.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/sections/inventory/view/inventory-view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/sections/inventory/view/inventory-view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,20 +53,54 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.manage.executor": "Run",
+    "Python.settings.executor": "Run",
     "Python.tests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Santi/OneDrive/GitHub/MuniClub/backend/Main"
+    "last_opened_file_path": "C:/Users/Santi/OneDrive/GitHub/MuniClub/backend"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\backend\Main" />
       <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\backend" />
+      <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\backend\Main" />
       <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\MuniClub" />
       <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\MuniClub\Main" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Santi\OneDrive\GitHub\MuniClub\backend" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MuniClub" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -115,12 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1737585004266</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Upgraded mock data WS">
+      <option name="closed" value="true" />
+      <created>1737941339537</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737941339537</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Changes" />
     <MESSAGE value="Added Frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Frontend" />
+    <MESSAGE value="Upgraded mock data WS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded mock data WS" />
   </component>
 </project>

@@ -34,12 +34,19 @@ export function InventoryView() {
 
   const [filterName, setFilterName] = useState('');
   const [inventoryData, setInventoryData] = useState(_inventory);
-
-  console.log(_inventory);
+  const [highlightedRows, setHighlightedRows] = useState([]);
 
   inventoryWs.onmessage = (e) => {
     const parsedMessage = JSON.parse(e.data);
     const wsMessage = parsedMessage?.message;
+
+    // Agregar ID al array de filas resaltadas
+    setHighlightedRows((prev) => [...prev, wsMessage.id]);
+
+    // Eliminar ID después de 1.5s
+    setTimeout(() => {
+      setHighlightedRows((prev) => prev.filter((id) => id !== wsMessage.id));
+    }, 1500);
 
     setInventoryData((prevInventory) => {
       const updatedInventory = [...prevInventory];
@@ -127,6 +134,7 @@ export function InventoryView() {
                       row={row}
                       selected={table.selected.includes(row.id)}
                       onSelectRow={() => table.onSelectRow(row.id)}
+                      isHighlighted={highlightedRows.includes(row.id)}
                     />
                   ))}
 

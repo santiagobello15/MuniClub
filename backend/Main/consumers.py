@@ -3,7 +3,7 @@ from channels.generic.websocket import WebsocketConsumer
 from asgiref.sync import async_to_sync
 import threading
 import random
-from backend.mock_data import inventoryMock
+from mock_data import inventoryMock
 
 
 class MainConsumer(WebsocketConsumer):

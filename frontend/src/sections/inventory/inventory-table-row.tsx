@@ -32,9 +32,15 @@ type InventoryTableRowProps = {
   row: InventoryProps;
   selected: boolean;
   onSelectRow: () => void;
+  isHighlighted: boolean;
 };
 
-export function InventoryTableRow({ row, selected, onSelectRow }: InventoryTableRowProps) {
+export function InventoryTableRow({
+  row,
+  selected,
+  onSelectRow,
+  isHighlighted,
+}: InventoryTableRowProps) {
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
 
   const handleOpenPopover = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
@@ -47,7 +53,16 @@ export function InventoryTableRow({ row, selected, onSelectRow }: InventoryTable
 
   return (
     <>
-      <TableRow hover tabIndex={-1} role="checkbox" selected={selected}>
+      <TableRow
+        sx={{
+          backgroundColor: isHighlighted ? 'skyblue' : 'inherit',
+          transition: 'background-color 0.5s ease-in-out',
+        }}
+        hover
+        tabIndex={-1}
+        role="checkbox"
+        selected={selected}
+      >
         <TableCell padding="checkbox">
           <Checkbox disableRipple checked={selected} onChange={onSelectRow} />
         </TableCell>
