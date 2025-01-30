@@ -29,7 +29,7 @@ DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ALLOWED_HOSTS = ["https://muni-club.vercel.app"]
+ALLOWED_HOSTS = ["municlub.onrender.com", "https://muni-club.vercel.app"]
 
 # Application definition
 
