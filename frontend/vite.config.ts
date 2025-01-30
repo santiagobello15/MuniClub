@@ -48,8 +48,8 @@ export default defineConfig({
       '/ws': {
         target: process.env.VITE_WS_URL,
         changeOrigin: true,
+        secure: false,
         ws: true,
-        rewrite: (path) => path.replace(/^\/ws/, '/ws'),
       },
     },
     port: PORT,
