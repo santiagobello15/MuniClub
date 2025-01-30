@@ -26,14 +26,23 @@ SECRET_KEY = 'django-insecure-j8s_%&f$$^7%vfir-0j1@8caq1+i85jv%=sosqa4hphxb*a83o
 DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:3000',
+    'http://localhost:3030',
+    'http://localhost:3039',
+]
+
 ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'Main',
     'channels',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

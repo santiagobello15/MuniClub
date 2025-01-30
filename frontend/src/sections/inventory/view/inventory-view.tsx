@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import dotenv from 'dotenv';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -24,7 +25,7 @@ import { emptyRows, applyFilter, getComparator } from '../utils';
 
 import type { InventoryProps } from '../inventory-table-row';
 
-const url = 'ws://127.0.0.1:8000/ws/socket-server/';
+const url = `/ws/socket-server/`;
 const inventoryWs = new WebSocket(url);
 
 // ----------------------------------------------------------------------

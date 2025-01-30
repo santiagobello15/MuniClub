@@ -2,6 +2,9 @@ import path from 'path';
 import checker from 'vite-plugin-checker';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +39,18 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api/v1': 'http://127.0.0.1:8000',
+      '/api/v1': {
+        target: process.env.VITE_HTTP_URL,
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path,
+      },
+      '/ws': {
+        target: process.env.VITE_WS_URL,
+        changeOrigin: true,
+        ws: true,
+        rewrite: (path) => path.replace(/^\/ws/, '/ws'),
+      },
     },
     port: PORT,
     host: true,
