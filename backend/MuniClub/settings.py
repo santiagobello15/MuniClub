@@ -33,8 +33,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3039',
 ]
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = [".vercel.app"]
 
 # Application definition
 
