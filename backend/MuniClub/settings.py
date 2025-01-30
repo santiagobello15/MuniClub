@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,14 +29,7 @@ DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:3000',
-    'http://localhost:3030',
-    'http://localhost:3039',
-    '.vercel.app'
-]
-
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ["https://muni-club.vercel.app"]
 
 # Application definition
 
@@ -59,14 +54,24 @@ CHANNEL_LAYERS = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 ROOT_URLCONF = 'MuniClub.urls'
 
